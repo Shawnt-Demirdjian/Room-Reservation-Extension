@@ -50,16 +50,31 @@ function clickSubmit() {
 }
 
 function closeWindow() {
-	window.close();
+	chrome.storage.local.set({
+		"currTab": ""
+	}, function () {
+		window.close();
+	});
 }
 
-$(document).ready(function () {
-	// Call each function two second after the previous
-	setTimeout(clickStartTime, 4000);
-	setTimeout(clickEndTime, 6000);
-	setTimeout(clickSubmitTimes, 8000);
-	setTimeout(clickContinue, 10000);
-	setTimeout(enterFormInfo, 12000);
-	setTimeout(clickSubmit, 14000);
-	setTimeout(closeWindow, 16000);
+// only run if was opened by extention
+// get current tabID
+chrome.runtime.sendMessage({
+	request: "tabID"
+}, function (response) {
+	// get currTab in use by extention
+	chrome.storage.local.get(['currTab'], function (result) {
+		if (result.currTab == response.tabID) {
+			$(document).ready(function () {
+				// Call each function two second after the previous
+				// setTimeout(clickStartTime, 4000);
+				// setTimeout(clickEndTime, 6000);
+				// setTimeout(clickSubmitTimes, 8000);
+				// setTimeout(clickContinue, 10000);
+				// setTimeout(enterFormInfo, 12000);
+				// setTimeout(clickSubmit, 14000);
+				setTimeout(closeWindow, 16000);
+			});
+		}
+	});
 });

@@ -4,5 +4,9 @@ document.getElementById("start").addEventListener("click", () => {
 	chrome.tabs.create({
 		url: "https://sdsu.libcal.com/reserve/24-7-area",
 		active: false
-	}, (newTab) => {});
+	}, (newTab) => {
+		chrome.storage.local.set({
+			"currTab": newTab.id
+		});
+	});
 });

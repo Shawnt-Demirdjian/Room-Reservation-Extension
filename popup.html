@@ -1,17 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>SDSU Room Reservation</title>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>SDSU Room Reservation</title>
+		<style>
+			html {
+				width: 400px
+			}
 
-<body>
-	<h1>SDSU Room Reservation</h1>
-	<button id="start">Start</button>
-	<script src="popup.js"></script>
-</body>
+			label{
+				font-size: 1.2em;
+			}
+
+			#title{
+				text-align: center;
+			}
+
+			#select-people {
+				margin-right: 10px;
+			}
+
+			#people{
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+			}
+
+			#or{
+				width: 30px;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 20px;
+				font-size: 1.2em;
+				border-bottom: 2px black solid;
+				border-top: 2px black solid;
+			}
+
+			.person {
+				padding-left: 3em;
+				text-indent: -2em;
+			}
+
+			#handle-date{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+
+			#select-start{
+				margin-bottom: 10px;
+			}
+
+			#start{
+				margin-top: 1em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1 id="title">SDSU Room Reservation</h1>
+		<hr>
+		<div id="handle-people">
+			<div id="select-people">
+				<h2>Select a Saved Person</h2>
+				<div id="people">
+
+				</div>
+			</div>
+			<div id="or">
+				<span>
+					OR
+				</span>
+			</div>
+			<div id="add-people">
+				<h2>Add a Person</h2>
+				<input type="text" id="first" placeholder="First Name">
+				<br>
+				<input type="text" id="last" placeholder="Last Name">
+				<br>
+				<input type="email" id="email" placeholder="SDSU Email">
+				<br>
+				<input type="number" id="redID" placeholder="Red ID">
+				<br>
+				<input type="button" value="Add Person">
+			</div>
+		</div>
+		<hr>
+		<div>
+			<h2>Select Date and Time</h2>
+			<div id="handle-date">
+				<div id="select-start">
+					<label for="start-time">Start Time</label>
+					<br>
+					<input id="start-time" type="datetime-local">
+				</div>
+				<div id="select-end">
+					<label for="start-time">For How Long?</label>
+					<br>
+					<select id="start-time">
+						<option value="4">4 Hours</option>
+						<option value="3.5">3.5 Hours</option>
+						<option value="3">3 Hours</option>
+						<option value="2.5">2.5 Hours</option>
+						<option value="2">2 Hours</option>
+						<option value="1.5">1.5 Hours</option>
+						<option value="1">1 Hour</option>
+						<option value="0.5">0.5 Hours</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<button id="start">Reserve My Room!</button>
+		<script src="jquery-3.3.1.min.js"></script>
+		<script src="popup.js"></script>
+	</body>
 
 </html>

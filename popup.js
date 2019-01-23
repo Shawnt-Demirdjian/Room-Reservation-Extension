@@ -22,6 +22,24 @@ $("#start").on("click", () => {
 	});
 });
 
+// On click Add Person button
+$("#add-person").on('click', function () {
+	let newPerson = {
+		'first': $("#add-first").val(),
+		'last': $("#add-last").val(),
+		'email': $("#add-email").val(),
+		'redID': $("#add-redID").val(),
+	};
+	chrome.storage.sync.get(['people'], function (result) {
+		result.people.push(newPerson);
+		chrome.storage.sync.set({
+			"people": result.people
+		}, function () {
+			window.location.href = "popup.html";
+		});
+	});
+});
+
 $(document).ready(() => {
 	chrome.storage.sync.get(['people'], function (result) {
 		let checked = "";

@@ -13,7 +13,6 @@ chrome.runtime.sendMessage({
 			chrome.storage.sync.get(['people'], function (peopleRes) {
 				// get person used
 				var person = peopleRes.people[Number.parseInt(form.personIndex)];
-				console.log(person);
 				$(document).ready(function () {
 					// Call each function two second after the previous
 					setTimeout(clickStartTime, 4000);
@@ -21,8 +20,8 @@ chrome.runtime.sendMessage({
 					setTimeout(clickSubmitTimes, 10000);
 					setTimeout(clickContinue, 13000);
 					setTimeout(enterFormInfo, 15000);
-					// setTimeout(clickSubmit, 18000);
-					// setTimeout(closeWindow, 21000);
+					setTimeout(clickSubmit, 18000);
+					setTimeout(closeWindow, 21000);
 
 					function clickStartTime() {
 						// click start time

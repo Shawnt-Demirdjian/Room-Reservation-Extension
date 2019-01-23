@@ -10,10 +10,8 @@
 
 ## TODO
 
-- Validate and sanitize form input.
+- Validate and sanitize form input. (date, time, room, person info)
 
 - Enforce extension to open only one tab at a time
 
 - Get some feedback after submitting. Success or why it failed.
-
-- Allow "People" (first name, last name, RedID, SDSU email) to be stored for easy reselect later. Should use sync storage for convenience.

@@ -26,7 +26,6 @@ $(document).ready(() => {
 			// On click Delete Person button
 			// This event listener is in this callback back the buttons to listen too are inserted just above
 			$(".delete-person").on('click', function () {
-				console.log("delete");
 				let personIndex = $(this).val();
 				chrome.storage.sync.get(['people'], function (result) {
 					result.people.splice(personIndex, 1);

@@ -1,4 +1,4 @@
-# SDSU Room Reservation Extention
+# SDSU Room Reservation Extension
 
 ## This is a Google Chrome Extension for reserving SDSU Library Study Rooms
 
@@ -10,10 +10,10 @@
 
 ## TODO
 
-- Enforce extention to open only one tab at a time
+- Validate and sanitize form input.
 
-- Add functionality for user to specify content of form submit.
+- Enforce extension to open only one tab at a time
 
-- Get some feedback after submiting. Success or why it failed.
+- Get some feedback after submitting. Success or why it failed.
 
 - Allow "People" (first name, last name, RedID, SDSU email) to be stored for easy reselect later. Should use sync storage for convenience.

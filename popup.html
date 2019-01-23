@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>SDSU Room Reservation</title>
-		<style>
-			html {
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SDSU Room Reservation</title>
+	<style>
+		html {
 				width: 400px
 			}
 
@@ -59,65 +59,84 @@
 				margin-top: 1em;
 			}
 		</style>
-	</head>
+</head>
 
-	<body>
-		<h1 id="title">SDSU Room Reservation</h1>
-		<hr>
-		<div id="handle-people">
-			<div id="select-people">
-				<h2>Select a Saved Person</h2>
-				<div id="people">
+<body>
+	<h1 id="title">SDSU Room Reservation</h1>
+	<hr>
+	<div id="handle-people">
+		<div id="select-people">
+			<h2>Select a Saved Person</h2>
+			<div id="people">
 
-				</div>
-			</div>
-			<div id="or">
-				<span>
-					OR
-				</span>
-			</div>
-			<div id="add-people">
-				<h2>Add a Person</h2>
-				<input type="text" id="first" placeholder="First Name">
-				<br>
-				<input type="text" id="last" placeholder="Last Name">
-				<br>
-				<input type="email" id="email" placeholder="SDSU Email">
-				<br>
-				<input type="number" id="redID" placeholder="Red ID">
-				<br>
-				<input type="button" value="Add Person">
 			</div>
 		</div>
-		<hr>
-		<div>
-			<h2>Select Date and Time</h2>
-			<div id="handle-date">
-				<div id="select-start">
-					<label for="start-time">Start Time</label>
-					<br>
-					<input id="start-time" type="datetime-local">
-				</div>
-				<div id="select-end">
-					<label for="start-time">For How Long?</label>
-					<br>
-					<select id="start-time">
-						<option value="4">4 Hours</option>
-						<option value="3.5">3.5 Hours</option>
-						<option value="3">3 Hours</option>
-						<option value="2.5">2.5 Hours</option>
-						<option value="2">2 Hours</option>
-						<option value="1.5">1.5 Hours</option>
-						<option value="1">1 Hour</option>
-						<option value="0.5">0.5 Hours</option>
-					</select>
-				</div>
+		<div id="or">
+			<span>
+				OR
+			</span>
+		</div>
+		<div id="add-people">
+			<h2>Add a Person</h2>
+			<input type="text" id="first" placeholder="First Name">
+			<br>
+			<input type="text" id="last" placeholder="Last Name">
+			<br>
+			<input type="email" id="email" placeholder="SDSU Email">
+			<br>
+			<input type="number" id="redID" placeholder="Red ID">
+			<br>
+			<input type="button" value="Add Person">
+		</div>
+	</div>
+	<hr>
+	<div>
+		<h2>Select Date and Time</h2>
+		<div id="handle-date">
+			<div id="select-start">
+				<label for="start-time">Start Time</label>
+				<br>
+				<input id="start-time" type="datetime-local" step="1800">
+			</div>
+			<div id="select-end">
+				<label for="length">For How Long?</label>
+				<br>
+				<select id="length">
+					<option value="8">4 Hours</option>
+					<option value="7">3.5 Hours</option>
+					<option value="6">3 Hours</option>
+					<option value="5">2.5 Hours</option>
+					<option value="4">2 Hours</option>
+					<option value="3">1.5 Hours</option>
+					<option value="2">1 Hour</option>
+					<option value="1">0.5 Hours</option>
+				</select>
 			</div>
 		</div>
-		<hr>
-		<button id="start">Reserve My Room!</button>
-		<script src="jquery-3.3.1.min.js"></script>
-		<script src="popup.js"></script>
-	</body>
+	</div>
+	<hr>
+	<div>
+		<h2>Select Room</h2>
+		<div id="handle-room">
+			<div id="select-room">
+				<label for="room">Room Letter</label>
+				<br>
+				<select id="room">
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+					<option value="E">E</option>
+					<option value="F">F</option>
+					<option value="G">G</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<button id="start">Reserve My Room!</button>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="popup.js"></script>
+</body>
 
 </html>

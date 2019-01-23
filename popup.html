@@ -41,8 +41,24 @@
 			}
 
 			.person {
+				position: relative;
 				padding-left: 3em;
 				text-indent: -2em;
+			}
+
+			.delete-person {
+				color:red;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				cursor: pointer;
+				background: none;
+				border: none;
+				transition: 100ms;
+			}
+
+			.delete-person:hover {
+				transform: scale(1.5)
 			}
 
 			#handle-date{
